@@ -1,0 +1,112 @@
+/* I. Table of Contents
+ *
+ * I. Table of Contents
+ * 1. Variable Definitions
+ * 2. General Styling
+ * 3. header Styling
+ * 4. The Page Style 
+ *
+ */
+ 
+
+/* 1. Variable Definitions */
+
+:root {
+    --fs-main: clamp(1.2rem, 3vw, 1.46rem);
+	
+	--clr-header-bg: rgba(0, 220, 255, 0.7);
+	--clr-index-bg: rgba(50, 50, 50, 0.5);
+	 
+    --clr-links-base: #40F0E0;
+    --clr-links-hover: #11FF00;
+} 
+
+
+/* 2. General Styling */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	
+	background-image: url('../pix/limanu.webp');
+	background-size: cover;
+    background-repeat: none;
+	background-attachment: fixed;
+	
+	font-size: var(--fs-main);
+	word-wrap: break-word;
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-links-base);
+}
+
+a:hover {
+	color: var(--clr-links-hover);
+}
+
+a:focus {
+	border: 3px solid red;
+	color: darkgreen;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/* 3. header Styling */
+
+header { 
+    background-color: var(--clr-header-bg);
+	overflow: hidden;
+	
+	color: yellow;
+	text-align: center;
+	padding-inline: 3rem;
+}
+
+.subheading { 
+    display: none;
+}
+
+@media(min-width:720px) {
+	.subheading {
+		display: inline-block;
+	}
+}
+
+
+/* 4. The Page Style */
+
+main {	
+    width: 80%;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+    margin-inline: auto;
+
+    background-color: var(--clr-index-bg);
+	border: 4px solid cyan;
+	
+	padding-inline: 2.7rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}	
+
+.toplinks {
+	margin-bottom: 4.5rem;
+}
+
+.bottomlink {
+	margin-top: 4rem;
+}
+
+.heading { 
+    margin-bottom: 3rem;
+}
